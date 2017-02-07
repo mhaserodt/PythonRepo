@@ -26,8 +26,8 @@ if not os.path.exists(newpath):
     os.makedirs(newpath)
 
 #create filenames and sheetnames variables
-#Filename = CompanyLastMonthReporting.xlsx
-filename = ('Company' + lastMonth.strftime("%B") + 'Reporting.xlsx')
+#Filename = CompanyLastMonthReport.xlsx
+filename = ('Company' + lastMonth.strftime("%B") + 'Report.xlsx')
 
 #sheets LastMonth Captured, LastMonth Returns, LastMonth Sales
 capturedsheet = (lastMonth.strftime("%B") + ' Captured')
