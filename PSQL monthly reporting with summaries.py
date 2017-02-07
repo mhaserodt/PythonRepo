@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Feb  7 14:56:43 2017
+
+@author: marc.haserodt
+"""
 #import stuff
 import os
 import psycopg2 as pg
@@ -20,8 +26,8 @@ if not os.path.exists(newpath):
     os.makedirs(newpath)
 
 #create filenames and sheetnames variables
-#Filename = LastMonthReporting.xlsx
-filename = (lastMonth.strftime("%B") + 'Reporting.xlsx')
+#Filename = CompanyLastMonthReporting.xlsx
+filename = ('Company' + lastMonth.strftime("%B") + 'Reporting.xlsx')
 
 #sheets LastMonth Captured, LastMonth Returns, LastMonth Sales
 capturedsheet = (lastMonth.strftime("%B") + ' Captured')
@@ -50,8 +56,9 @@ order by 1 asc, 2 asc
 """
 #create variable DF from the SQL results
 df = read_sql(company_captured, conn, coerce_float=True)
-#show what's in DF
-print (df)
+#show a little of what's in DF
+print ("Captured")
+print (df.head())
 
 #Captured sheet daily summary SQL code
 company_captured_summary =  """
@@ -66,8 +73,10 @@ group by 1
 """
 #create variable DF2 from the summary SQL results
 df2 = read_sql(company_captured_summary, conn, coerce_float=True)
-#show what's in DF2
-print (df2)
+#show a little of what's in DF2
+print ("Captured Summary")
+print (df2.head())
+
 
 #create sheet LastMonth Captured in the above created excel file and add results stored in DF and DF2
 df.to_excel(writer, sheet_name=capturedsheet, index=False)
@@ -87,8 +96,10 @@ order by 1 asc, 2 asc
 """
 #create variable DF from the SQL results
 df = read_sql(ostock_sales, conn, coerce_float=True)
-#show what's in DF
-print (df)
+#show a little of what's in DF
+print ("Sales")
+print (df.head())
+
 
 #Sales sheet daily summary SQL code
 company_sales_summary =  """
@@ -102,8 +113,10 @@ group by 1
 """
 #create variable DF2 from the summary SQL results
 df2 = read_sql(company_sales_summary, conn, coerce_float=True)
-#show what's in DF2
-print (df2)
+#show a little of what's in DF2
+print ("Sales summary")
+print (df2.head())
+
 
 #create sheet LastMonth Sales in the above created excel file and add results stored in DF and DF2
 df.to_excel(writer, sheet_name=salessheet, index=False)
@@ -128,8 +141,9 @@ order by 1 asc, 2 asc
 """
 #create variable DF from the SQL results
 df = read_sql(company_returns, conn, coerce_float=True)
-#show what's in DF
-print (df)
+#show a little of what's in DF
+print ("Returns")
+print (df.head())
 
 #Returns sheet daily summary SQL code
 company_returns_summary =  """
@@ -145,8 +159,9 @@ group by 1
 """
 #create variable DF2 from the summary SQL results
 df2 = read_sql(company_returns_summmary, conn, coerce_float=True)
-#show what's in DF2
-print (df2)
+#show a little of what's in DF2
+print ("Returns")
+print (df2.head())
 
 #create sheet LastMonth Returns in the above created excel file and add results stored in DF
 df.to_excel(writer, sheet_name=returnssheet, index=False)
