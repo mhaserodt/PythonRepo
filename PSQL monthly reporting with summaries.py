@@ -167,7 +167,7 @@ print (df2.head())
 df.to_excel(writer, sheet_name=returnssheet, index=False)
 df2.to_excel(writer, sheet_name=returnssheet, index=False, startcol=5)
 
-#save the excel file
+#save the excel file  See sample excel file "CompanyJanuaryReport.xlsx"
 writer.save()
 
 #close connections
