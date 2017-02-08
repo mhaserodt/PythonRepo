@@ -3,6 +3,7 @@
 Created on Fri Feb  3 13:51:58 2017
 
 @author: marc.haserodt
+A snippet of code used to get the prior month name
 """
 ## create a filename based on the date.
 

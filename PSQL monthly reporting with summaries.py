@@ -3,6 +3,8 @@
 Created on Tue Feb  7 14:56:43 2017
 
 @author: marc.haserodt
+First attempt at connecting to PSQL database via Python, generating results, and outputting to Excel.
+This is to automate a monthly report but has been made generic to protect sensitive information.
 """
 #import stuff
 import os

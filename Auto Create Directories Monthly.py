@@ -3,6 +3,7 @@
 Created on Fri Feb  3 14:43:29 2017
 
 @author: marc.haserodt
+A snippet of code used in another project.
 """
 ## automatically creates a new directory named MONTH YEAR based on what the prior month was.
 import os

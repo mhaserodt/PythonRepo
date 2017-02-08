@@ -1,3 +1,5 @@
+#For generating a list of PSQL ilike statements.  Was created for a specific project but made generic to protect sensitive information
+
 alarms = ['alarm1',
 'alarm2',
 'alarm3',
