@@ -1,3 +1,4 @@
+#for generating a list of PSQL ilike statements
 alarms = ['alarm1',
 'alarm2',
 'alarm3',
