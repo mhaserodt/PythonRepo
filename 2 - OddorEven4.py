@@ -1,3 +1,5 @@
+#Take numeric inputs and determing if even, odd, and divisible
+
 myNum1 = int(input("Yo, give me a number! "))
 myNum2 = int(input("Throw another number at me! "))
 modNums = myNum1 % myNum2
