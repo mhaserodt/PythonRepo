@@ -3,6 +3,7 @@
 Created on Thu May 28 16:20:16 2020
 
 @author: mhaserodt
+A quick tool created to download and preserve a YouTube video.
 """
 
 #importing the module 
