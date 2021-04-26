@@ -1,3 +1,6 @@
+#Using f strings, and inputs.  Returning name, the year one will turn 100, and look it X number of times.
+
+
 from datetime import datetime
 currentYear = datetime.now().year
 
