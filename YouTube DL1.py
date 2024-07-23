@@ -16,7 +16,7 @@ from pytube import YouTube
 #video = YouTube('https://www.youtube.com/watch?v=KVc5RXXBbbU')
   
 
-video_url = 'https://www.bigmarker.com/thinkful/Thinkful-Webinar-Intro-to-JavaScript-Build-a-Virtual-Pet3-2020-04-06-07-00-pm?bmid=a9ba7f557a22' # paste here your Youube videos' url
+video_url = 'https://www.youtube.com/watch?v=KVc5RXXBbbU' # paste here your YouTube videos' url
 youtube = YouTube(video_url)
 video = youtube.streams.first()
 video.download('/Users/Marc/Desktop') # path, where to video download.
